@@ -1,16 +1,21 @@
+$tk-button-height: 32px;
+
+@include condensed('.tk-button', $tk-button-height, $density-2);
+
 .tk-button {
   font-size: toRem(12);
   display: inline-block;
   border: none;
   border-radius: toRem(28);
-  padding: toRem(8) toRem(16);
+  padding: toRem(0) toRem(16);
   letter-spacing: toRem(0.5);
   text-transform: uppercase;
   text-align: center;
-  line-height: toRem(16);
-  height: auto;
   width: auto;
+  height: $--tk-button-height;
   white-space: nowrap;
+  margin-top: 8px;
+  margin-bottom: 8px;
 
   cursor: pointer;
   &:disabled {
@@ -38,7 +43,6 @@
   }
   &--icon {
     border-radius: 50%;
-    padding: toRem(8);
     min-width: toRem(32);
   }
 }

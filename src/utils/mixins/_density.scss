@@ -1,0 +1,17 @@
+@mixin condensed($tk-component, $css-prop, $size, $density, $margin: 0) {
+  .condensed,
+  .tk-theme-condensed {
+    #{$tk-component}:not(.tk-scape-condensed) {
+      @if ($css-prop == 'height') {
+        height: get-density($height, $density);
+      } @else {
+        padding-top: get-density($size, $density);
+        padding-bottom: get-density($size, $density);
+      }
+      @if ($margin > 0) {
+        margin-top: ($margin - $density-interval) * 1px;
+        margin-bottom: ($margin - $density-interval) * 1px;
+      }
+    }
+  }
+}
