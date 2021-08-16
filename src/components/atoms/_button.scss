@@ -1,6 +1,6 @@
 $tk-button-height: 32px;
 
-@include condensed('.tk-button', $tk-button-height, $density-2);
+@include condensed('.tk-button', 'height', $tk-button-height, $density-2);
 
 .tk-button {
   font-size: toRem(12);
@@ -12,7 +12,7 @@ $tk-button-height: 32px;
   text-transform: uppercase;
   text-align: center;
   width: auto;
-  height: $--tk-button-height;
+  height: $tk-button-height;
   white-space: nowrap;
   margin-top: 8px;
   margin-bottom: 8px;
