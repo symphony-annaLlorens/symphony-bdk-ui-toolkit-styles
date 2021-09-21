@@ -21,4 +21,20 @@ const generateIcons = () => {
   console.info('Auto-generated icons.stories.js ✅');
 };
 
+const blockSvgProp = (prop) => {
+  fs.readdirSync(`${SRC_ICONS}svg/`).forEach(file => {
+    fs.readFile(`${SRC_ICONS}svg/${file}`, 'utf8', (err, svgSrc) => {
+      try {
+        if(svgSrc.includes(prop)) {
+          throw `The file ${file} contains a not allowed css prop: ${prop}. Please, consider updating the source file`;
+        }
+      }
+      catch (e) {
+        throw new Error(e);
+      }
+    });
+  });
+  }
+
+blockSvgProp(`fill-rule="evenodd"`);
 generateIcons();
