@@ -21,12 +21,12 @@ const generateIcons = () => {
   console.info('Auto-generated icons.stories.js ✅');
 };
 
-const blockSvgProp = (prop) => {
+const blockSvgProp = (property) => {
   fs.readdirSync(`${SRC_ICONS}svg/`).forEach(file => {
     fs.readFile(`${SRC_ICONS}svg/${file}`, 'utf8', (err, svgSrc) => {
       try {
-        if(svgSrc.includes(prop)) {
-          throw `The file ${file} contains a not allowed css prop: ${prop}. Please, consider updating the source file`;
+        if(svgSrc.includes(property)) {
+          throw `File ${file} uses a forbidden property: ${property}.`;
         }
       }
       catch (e) {
