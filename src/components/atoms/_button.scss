@@ -15,7 +15,7 @@ $tk-button-size: toRem(32);
   white-space: nowrap;
   cursor: pointer;
   &:disabled {
-    cursor: not-allowed;
+    cursor: default;
     pointer-events: all;
   }
   i {

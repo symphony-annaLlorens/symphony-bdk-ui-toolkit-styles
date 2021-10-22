@@ -13,6 +13,19 @@
   transition: all 200ms ease-in-out;
 }
 
+@mixin addFocusStyle($isRound: 'true') {
+  &:focus-visible {
+    outline: toRem(2) solid #{getColor($electricity, '40')};
+    @if ($isRound == 'true') {
+      outline-offset: toRem(1);
+      border-radius: 50%;
+    } @else {
+      border-radius: toRem(2);
+      outline-offset: toRem(2);
+    }
+  }
+}
+
 // Simulate browser outline (Come from https://ghinda.net/article/mimic-native-focus-css)
 @mixin browserOutline() {
   outline-width: toRem(2);
@@ -21,7 +34,7 @@
 
   /* WebKit gets its native focus styles.
    */
-  @media (-webkit-min-device-pixel-ratio:0) {
+  @media (-webkit-min-device-pixel-ratio: 0) {
     outline-color: -webkit-focus-ring-color;
     outline-style: auto;
   }
