@@ -1,4 +1,15 @@
-// .condensed is to support 1.5 legacy condensed theme
-.condensed, .tk-theme-condensed {
-  --tk-table-cell-height: 32px;
+/* Density interval from Symphony guidelines. */
+$density-interval: 4;
+$density-1: -1;
+$density-2: -2;
+$density-3: -3;
+
+
+@function get-density($height, $scale) {
+  @return $height + $density-interval * $scale * 1px;
+}
+
+.tk-button {
+  padding: toRem(12) toRem(16);
+  height: toRem(32);
 }

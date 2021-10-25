@@ -5,7 +5,7 @@ export default {
 export const Sizes = () => `
 <div style="margin: 16px;">
   <h2>Default </h2>
-  <button class="tk-button tk-button--primary">Button</button>
+  <button class="tk-button tk-button--primary" style="display:flex">Button</button>
   <button class="tk-button tk-button--primary "><i class="tk-icon-lock"></i> Icon left</button>
   <button class="tk-button tk-button--primary ">Icon right <i class="tk-icon-lock"></i></button>
   <button class="tk-button tk-button--primary tk-button--icon"><i class="tk-icon-video-off"></i></button>
@@ -176,5 +176,51 @@ export const Theming = () => `
 <div class="themed-primary-btn">
 <h4>Primary button</h4>
 <button class="tk-button tk-button--primary">Button</button>
+</div>
+`
+
+export const CondensedMode = () =>`
+<h2>Condensed mode</h2>
+<div class="tk-theme-condensed">
+<div>The button component </div>
+<div style="margin: 16px;">
+  <h3>Primary button</h3>
+  <button class="tk-button tk-button--primary" style="display:flex">Button</button>
+  <button class="tk-button tk-button--primary"><i class="tk-icon-lock"></i> Button</button>
+  <button class="tk-button tk-button--primary tk-button--icon"><i class="tk-icon-more"></i></button>
+  <button class="tk-button tk-button--primary" disabled>Button</button>
+  <button class="tk-button tk-button--primary" disabled><i class="tk-icon-lock"></i> Button</button>
+  <button class="tk-button tk-button--primary" disabled><i class="tk-icon-check tk-color-action-ok"></i></button>
+</div>
+
+<div style="margin: 16px;">
+  <h3>Secondary button</h3>
+  <button class="tk-button tk-button--secondary">Button</button>
+  <button class="tk-button tk-button--secondary"><i class="tk-icon-lock"></i> Button</button>
+  <button class="tk-button tk-button--secondary tk-button--icon"><i class="tk-icon-more"></i></button>
+  <button class="tk-button tk-button--secondary" disabled>Button</button>
+  <button class="tk-button tk-button--secondary" disabled><i class="tk-icon-lock"></i> Button</button>
+  <button class="tk-button tk-button--secondary" disabled><i class="tk-icon-check tk-color-action-ok"></i></button>
+</div>
+
+<div style="margin: 16px;">
+  <h3>Tertiary button</h3>
+  <button class="tk-button tk-button--tertiary">Button</button>
+  <button class="tk-button tk-button--tertiary"><i class="tk-icon-lock"></i> Button</button>
+  <button class="tk-button tk-button--tertiary tk-button--icon"><i class="tk-icon-more"></i></button>
+  <button class="tk-button tk-button--tertiary" disabled>Button</button>
+  <button class="tk-button tk-button--tertiary" disabled><i class="tk-icon-lock"></i> Button</button>
+  <button class="tk-button tk-button--tertiary" disabled><i class="tk-icon-check tk-color-action-ok"></i></button>
+</div>
+
+<div style="margin: 16px;">
+  <h3>Destructive button</h3>
+  <button class="tk-button tk-button--destructive">Button</button>
+  <button class="tk-button tk-button--destructive"><i class="tk-icon-lock"></i> Button</button>
+  <button class="tk-button tk-button--destructive tk-button--icon"><i class="tk-icon-more"></i></button>
+  <button class="tk-button tk-button--destructive" disabled>Button</button>
+  <button class="tk-button tk-button--destructive" disabled><i class="tk-icon-lock"></i> Button</button>
+  <button class="tk-button tk-button--destructive" disabled><i class="tk-icon-check tk-color-action-ok"></i></button>
+</div>
 </div>
 `
