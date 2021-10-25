@@ -1,0 +1,12 @@
+@mixin condensed($tk-component, $css-prop, $size, $density) {
+  .condensed,
+  .tk-theme-condensed {
+    #{$tk-component}:not(.tk-scape-condensed) {
+      @if ($css-prop == 'height') {
+        height: get-density($height, $density);
+      } @else {
+    
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
-$tk-button-size: toRem(32);
+$tk-button-size:32px;
+//@include condensed($tk-button-size-map, $density-2);
 .tk-button {
   position: relative;
   font-size: toRem(12);
@@ -14,6 +15,8 @@ $tk-button-size: toRem(32);
   width: auto;
   white-space: nowrap;
   cursor: pointer;
+ // @extend .tk-py-1h;
+  //@extend .tk-px-2;
   &:disabled {
     cursor: not-allowed;
     pointer-events: all;
@@ -59,7 +62,7 @@ $tk-button-size: toRem(32);
     }
   }
   &--small {
-    padding: toRem(0) toRem(12);
+    padding: toRem(4) toRem(12);
     @include addIconSize(12);
     $tk-button-size: toRem(24);
     height: $tk-button-size;
