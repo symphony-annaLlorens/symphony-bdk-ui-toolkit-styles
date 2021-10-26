@@ -166,6 +166,12 @@ export const TextField = () => {
       <i class="tk-icon-people"></i>
     </div>
   </div>
+
+  <div class="tk-mt-2"></div>
+  <div class="tk-input__container tk-input__container--medium tk-input__container--readonly"><input id="tk-input-pR75IzxQpPd" aria-autocomplete="none" aria-multiline="false" class="tk-input tk-input--medium" readonly="" type="text" value="Lorem Ipsum"><button class="tk-input__hide" tabindex="0">HIDE</button></div>
+  <div class="tk-mt-2"></div>
+  <div class="tk-input__container tk-input__container--small tk-input__container--readonly"><input id="tk-input-pR75IzxQpPd" aria-autocomplete="none" aria-multiline="false" class="tk-input tk-input--small" readonly="" type="text" value="Lorem Ipsum"><button class="tk-input__hide" tabindex="0">HIDE</button></div>
+
   <h3>Disabled</h3>
 
   <div class="tk-input__container tk-input__container--disabled">
@@ -194,10 +200,6 @@ export const TextField = () => {
     </div>
   </div>
 
-  <div class="tk-mt-2"></div>
-  <div class="tk-input__container tk-input__container--medium tk-input__container--disabled"><input id="tk-input-pR75IzxQpPd" aria-autocomplete="none" aria-multiline="false" class="tk-input tk-input--medium" disabled="" type="text" value="Lorem Ipsum"><button class="tk-input__hide" tabindex="0">HIDE</button></div>
-  <div class="tk-mt-2"></div>
-  <div class="tk-input__container tk-input__container--small tk-input__container--disabled"><input id="tk-input-pR75IzxQpPd" aria-autocomplete="none" aria-multiline="false" class="tk-input tk-input--small" disabled="" type="text" value="Lorem Ipsum"><button class="tk-input__hide" tabindex="0">HIDE</button></div>
   <h2>Text Field with label</h2>
   <div class="tk-input-group">
     <div class="tk-input-group__header">
@@ -641,7 +643,7 @@ export const TextArea = () => {
   <div class="tk-mt-2"></div>
   <textarea class="tk-input tk-input--small" placeholder="Small" disabled></textarea>
   
-  <h2>Text Field with label</h2>
+  <h2>Text Area with label</h2>
   <div class="tk-input-group">
     <div class="tk-input-group__header">
       <label class="tk-label" for="input">Field label</label>

@@ -220,6 +220,9 @@ textarea.tk-input {
       getColor($--tk-input-color, readonly),
       getColor($--tk-input-color, readonlyBg)
     );
+    .tk-input__hide {
+      color: getColor($--tk-input-hide-color, disabled);
+    }
   }
 
   &--disabled {
@@ -236,8 +239,7 @@ textarea.tk-input {
       color: getColor($--tk-input-color, disabledText);
     }
     .tk-input__hide {
-      color: getColor($--tk-input-hide-color, disabled);
-      cursor: default;
+      display: none;
     }
   }
 }
