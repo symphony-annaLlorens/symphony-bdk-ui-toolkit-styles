@@ -14,7 +14,7 @@ $--tk-outline-color: #88c0fb;
 
 /** ======== Inputs and text areas ======== */
 $--tk-input-color: (
-  default: var(--tk-input-color-default, getColor($graphite, '50')),
+  default: var(--tk-input-color-default, getColor($graphite, '40')),
   defaultBg: var(--tk-input-color-default-bg, $scolor-white),
   hover: var(--tk-input-color-hover, getColor($electricity, '40')),
   active: var(--tk-input-color-active, getColor($electricity, '50')), // "focus" uses "active" colors

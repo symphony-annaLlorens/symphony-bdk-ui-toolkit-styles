@@ -77,7 +77,7 @@ export const TextField = () => {
       class="tk-input tk-input--with-icon"
       placeholder="Type something..."
     />
-    <div tabindex="0" class="tk-input__icon">
+    <div class="tk-input__icon">
         <i class="tk-icon-people"></i>
       </div>
     </div>
@@ -89,7 +89,7 @@ export const TextField = () => {
       class="tk-input tk-input--small tk-input--with-icon"
       placeholder="Type something..."
     />
-    <div tabindex="0" class="tk-input__icon">
+    <div class="tk-input__icon">
     <i class="tk-icon-people"></i>
   </div>
 </div>
@@ -111,7 +111,7 @@ export const TextField = () => {
         class="tk-input tk-input--with-icon"
         placeholder="Type something..."
       />
-      <div tabindex="0" class="tk-input__icon">
+      <div class="tk-input__icon">
         <i class="tk-icon-people"></i>
       </div>
     </div>
@@ -129,7 +129,7 @@ export const TextField = () => {
         class="tk-input tk-input--error tk-input--small tk-input--with-icon"
         placeholder="Type something..."
       />
-      <div tabindex="0" class="tk-input__icon">
+      <div class="tk-input__icon">
         <i class="tk-icon-people"></i>
       </div>
     </div>
@@ -148,7 +148,7 @@ export const TextField = () => {
       value="Lorem Ipsum"
       readonly
     />
-    <div tabindex="0" class="tk-input__icon">
+    <div class="tk-input__icon">
       <i class="tk-icon-people"></i>
     </div>
   </div>
@@ -162,7 +162,7 @@ export const TextField = () => {
       value="Lorem Ipsum"
       readonly
     />
-    <div tabindex="0" class="tk-input__icon">
+    <div class="tk-input__icon">
       <i class="tk-icon-people"></i>
     </div>
   </div>
@@ -176,7 +176,7 @@ export const TextField = () => {
       placeholder="Type something..."
       disabled
     />
-    <div tabindex="0" class="tk-input__icon">
+    <div class="tk-input__icon">
       <i class="tk-icon-people"></i>
     </div>
   </div>
@@ -189,7 +189,7 @@ export const TextField = () => {
       placeholder="Type something..."
       disabled
     />
-    <div tabindex="0" class="tk-input__icon">
+    <div class="tk-input__icon">
       <i class="tk-icon-people"></i>
     </div>
   </div>
@@ -242,7 +242,7 @@ export const TextField = () => {
         class="tk-input tk-input--with-icon"
         placeholder="Type something..."
       />
-      <div tabindex="0" class="tk-input__icon">
+      <div class="tk-input__icon">
         <i class="tk-icon-people"></i>
       </div>
     </div>
@@ -259,7 +259,7 @@ export const TextField = () => {
         class="tk-input tk-input--small tk-input--with-icon"
         placeholder="Type something..."
       />
-      <div tabindex="0" class="tk-input__icon">
+      <div class="tk-input__icon">
         <i class="tk-icon-people"></i>
       </div>
     </div>
@@ -382,7 +382,7 @@ export const TextField = () => {
         class="tk-input tk-input--with-icon"
         placeholder="Type something..."
       />
-      <div tabindex="0" class="tk-input__icon">
+      <div class="tk-input__icon">
         <i class="tk-icon-calendar"></i>
       </div>
     </div>
@@ -399,7 +399,7 @@ export const TextField = () => {
         class="tk-input tk-input--small tk-input--with-icon"
         placeholder="Type something..."
       />
-      <div tabindex="0" class="tk-input__icon">
+      <div class="tk-input__icon">
         <i class="tk-icon-calendar"></i>
       </div>
     </div>
@@ -419,7 +419,7 @@ export const TextField = () => {
           class="tk-input"
           placeholder="Type something..."
         />
-        <div tabindex="0" class="tk-input__icon">
+        <div class="tk-input__icon">
           <i class="tk-icon-calendar"></i>
         </div>
       </div>
@@ -443,7 +443,7 @@ export const TextField = () => {
           class="tk-input tk-input--small"
           placeholder="Type something..."
         />
-        <div tabindex="0" class="tk-input__icon">
+        <div class="tk-input__icon">
           <i class="tk-icon-calendar"></i>
         </div>
       </div>
@@ -468,7 +468,7 @@ export const TextField = () => {
         value="Lorem Ipsum"
         readonly
       />
-      <div tabindex="0" class="tk-input__icon">
+      <div class="tk-input__icon">
         <i class="tk-icon-calendar"></i>
       </div>
     </div>
@@ -487,7 +487,7 @@ export const TextField = () => {
         value="Lorem Ipsum"
         readonly
       />
-      <div tabindex="0" class="tk-input__icon">
+      <div class="tk-input__icon">
         <i class="tk-icon-calendar"></i>
       </div>
     </div>
@@ -507,7 +507,7 @@ export const TextField = () => {
         placeholder="Type something..."
         disabled
       />
-      <div tabindex="0" class="tk-input__icon">
+      <div class="tk-input__icon">
         <i class="tk-icon-calendar"></i>
       </div>
     </div>
@@ -525,7 +525,7 @@ export const TextField = () => {
         placeholder="Type something..."
         disabled
       />
-      <div tabindex="0" class="tk-input__icon">
+      <div class="tk-input__icon">
         <i class="tk-icon-calendar"></i>
       </div>
     </div>

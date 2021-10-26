@@ -5,6 +5,7 @@
 }
 
 /* Outlines are common to all inputs. Blurred outline is not supported yet. */
+/* This mixin will be depracated */
 @mixin addOutline() {
   outline: toRem(4) auto $--tk-outline-color;
 }
@@ -13,9 +14,13 @@
   transition: all 200ms ease-in-out;
 }
 
+/* New outline since SDS migration*/
+@mixin outlineStyle {
+  outline: toRem(2) solid #{getColor($electricity, '40')};
+}
 @mixin addFocusStyle($isRound: 'true') {
   &:focus-visible {
-    outline: toRem(2) solid #{getColor($electricity, '40')};
+    @include outlineStyle;
     @if ($isRound == 'true') {
       outline-offset: toRem(1);
       border-radius: 50%;

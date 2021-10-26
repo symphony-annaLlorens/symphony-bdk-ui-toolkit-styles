@@ -125,7 +125,7 @@ textarea.tk-input {
     @include spacingField(0.5, 0);
     line-height: toRem(20);
 
-    &:disabled:hover {
+    &:disabled:hover, &:disabled:active, &:read-only:hover, &:read-only:active, &:read-only:focus-within {
       box-shadow: none; // force cancel tk-input border
     }
 
@@ -147,8 +147,9 @@ textarea.tk-input {
     }
 
     &__hide {
-      height: 100%;
       max-height: toRem(39);
+      font-size: toRem(12);
+      line-height: toRem(16);
       padding: 0 toRem(2);
       background-color: transparent;
       color: getColor($--tk-input-hide-color, default);
@@ -196,12 +197,14 @@ textarea.tk-input {
       @include spacingField(0, 0);
     }
     .tk-input__icon {
+      font-size: toRem(12);
       margin-right: toRem(4);
     }
     .tk-input__hide:focus-visible {
       outline-offset: 0;
     }
     .tk-input__right-decorators {
+      font-size: toRem(12);
       > *:not(:last-child) {
         margin-right: toRem(4);
       }
@@ -230,6 +233,7 @@ textarea.tk-input {
     );
     .tk-input__icon {
       outline: none;
+      color: getColor($--tk-input-color, disabledText);
     }
     .tk-input__hide {
       color: getColor($--tk-input-hide-color, disabled);
