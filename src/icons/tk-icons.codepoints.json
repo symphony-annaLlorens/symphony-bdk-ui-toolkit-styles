@@ -163,5 +163,7 @@
     "zoom-out": 61858,
     "community": 61730,
     "following": 61755,
-    "grid": 61859
+    "grid": 61859,
+    "play": 61860,
+    "stop": 61861
 }
