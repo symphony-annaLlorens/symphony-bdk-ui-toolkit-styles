@@ -13,8 +13,6 @@
   width: auto;
   white-space: nowrap;
   cursor: pointer;
-  // @extend .tk-py-1h;
-  //@extend .tk-px-2;
   &:disabled {
     cursor: not-allowed;
     pointer-events: all;
@@ -44,7 +42,7 @@
     @include styleFilledButton($--tk-button-color-destructive-primary);
   }
   &--icon {
-    padding: 0 !important; // Avoid override on rounded icon by the size variants
+    padding: 0 !important; // Avoid override on the icon button by the size variants
     display: inline-block;
     border-radius: 50%;
   }
