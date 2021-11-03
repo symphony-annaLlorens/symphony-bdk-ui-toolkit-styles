@@ -1,28 +1,23 @@
-$tk-button-size:32px;
-//@include condensed($tk-button-size-map, $density-2);
+@include condensedButton;
+
 .tk-button {
+  @include mediumButton;
   position: relative;
-  font-size: toRem(12);
   display: inline-block;
   border: none;
   border-radius: toRem(28);
-  padding: toRem(8) toRem(16);
   letter-spacing: toRem(0.5);
   text-transform: uppercase;
   text-align: center;
   line-height: toRem(16);
-  height: $tk-button-size;
   width: auto;
   white-space: nowrap;
   cursor: pointer;
- // @extend .tk-py-1h;
+  // @extend .tk-py-1h;
   //@extend .tk-px-2;
   &:disabled {
     cursor: not-allowed;
     pointer-events: all;
-  }
-  i {
-    font-size: toRem(16);
   }
   &--primary {
     @include styleFilledButton($--tk-button-color-primary);
@@ -49,47 +44,15 @@ $tk-button-size:32px;
     @include styleFilledButton($--tk-button-color-destructive-primary);
   }
   &--icon {
-    padding: 0;
-    min-width: $tk-button-size;
-    min-height: $tk-button-size;
+    padding: 0 !important; // Avoid override on rounded icon by the size variants
     display: inline-block;
     border-radius: 50%;
-    &-right > i {
-      margin-left: toRem(8);
-    }
-    &-left > i {
-      margin-right: toRem(8);
-    }
   }
-  &--small {
-    padding: toRem(4) toRem(12);
-    @include addIconSize(12);
-    $tk-button-size: toRem(24);
-    height: $tk-button-size;
-    &.tk-button--icon {
-      padding: 0;
-      min-height: $tk-button-size;
-      min-width: $tk-button-size;
-    }
-    .tk-button--icon {
-      &-right > i {
-        margin-left: toRem(4);
-      }
-      &-left > i {
-        margin-right: toRem(4);
-      }
-    }
+  &.tk-button--small {
+    @include smallButton;
   }
-  &--large {
-    padding: toRem(0) toRem(24);
-    font-size: toRem(14);
-    $tk-button-size: toRem(40);
-    height: $tk-button-size;
-    &.tk-button--icon {
-      padding: 0;
-      min-height: $tk-button-size;
-      min-width: $tk-button-size;
-    }
+  &.tk-button--large {
+    @include largeButton;
   }
   .tk-button-icon--loading {
     position: absolute;
