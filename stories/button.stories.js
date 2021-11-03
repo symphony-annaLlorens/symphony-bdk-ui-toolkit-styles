@@ -178,49 +178,158 @@ export const Theming = () => `
 <button class="tk-button tk-button--primary">Button</button>
 </div>
 `
+export const CondensedMode = () => `
+<div class="tk-m-2">
+  <h2>Condensed mode</h2>
+  <div>Adding the <span class="code">.condensed</span> class on a parent element of the button component will
+  condense the <span class="font-bold">medium</span> and <span class="font-bold">large</span> variants of the button.
+  </div>
+  <div class="tk-mt-3">
+    <span class="tk-switch">
+      <div class="tk-switch__inputContainer" onclick="applyCondensed()">
+        <input class="tk-switch__input" type="checkbox" id="switch" value="active-switch-1" checked>
+        <span class="tk-switch__icon"></span>
+      </div>
+      <label class="tk-switch__label" for="switch" id="condense">Condensed</label>
+    </span>
+  </div>
 
-export const CondensedMode = () =>`
-<h2>Condensed mode</h2>
-<div class="tk-theme-condensed">
-<div>The button component </div>
-<div style="margin: 16px;">
-  <h3>Primary button</h3>
-  <button class="tk-button tk-button--primary" style="display:flex">Button</button>
-  <button class="tk-button tk-button--primary"><i class="tk-icon-lock"></i> Button</button>
-  <button class="tk-button tk-button--primary tk-button--icon"><i class="tk-icon-more"></i></button>
-  <button class="tk-button tk-button--primary" disabled>Button</button>
-  <button class="tk-button tk-button--primary" disabled><i class="tk-icon-lock"></i> Button</button>
-  <button class="tk-button tk-button--primary" disabled><i class="tk-icon-check tk-color-action-ok"></i></button>
-</div>
+<div id="condensed" class="condensed">
+<h4>Medium</h4>
+  <div class="tk-m-2">
+      <button class="tk-button tk-button--primary tk-button--medium">Button</button>
+      <button class="tk-button tk-button--primary tk-button--medium "><i class="tk-icon-lock"></i> Icon left</button>
+      <button class="tk-button tk-button--primary tk-button--medium ">Icon right <i class="tk-icon-lock"></i></button>
+      <button class="tk-button tk-button--primary tk-button--medium tk-button--icon"><i
+          class="tk-icon-video-off"></i></button>
+      <button class="tk-button tk-button--primary tk-button--medium" disabled>Disabled</button>
+      <button class="tk-button tk-button--primary tk-button--medium" disabled>Disabled <i
+          class="tk-icon-lock"></i></button>
+    </div>
+    <div class="tk-m-2">
+      <button class="tk-button tk-button--secondary tk-button--medium">Button</button>
+      <button class="tk-button tk-button--secondary tk-button--medium"><i class="tk-icon-lock"></i> Icon left</button>
+      <button class="tk-button tk-button--secondary tk-button--medium">Icon right <i class="tk-icon-lock "></i></button>
+      <button class="tk-button tk-button--secondary tk-button--medium tk-button--icon"><i
+          class="tk-icon-video-off"></i></button>
+      <button class="tk-button tk-button--secondary tk-button--medium" disabled>Disabled</button>
+      <button class=" tk-button tk-button--secondary tk-button--medium" disabled>Disabled <i
+          class="tk-icon-lock"></i></button>
+    </div>
+    <div class="tk-m-2">
+      <button class="tk-button tk-button--secondary-destructive tk-button--medium">Button</button>
+      <button class="tk-button tk-button--secondary-destructive tk-button--medium"><i class="tk-icon-lock"></i> Icon left</button>
+      <button class="tk-button tk-button--secondary-destructive tk-button--medium">Icon right <i class="tk-icon-lock"></i></button>
+      <button class="tk-button tk-button--secondary-destructive tk-button--medium tk-button--icon"><i
+          class="tk-icon-video-off"></i></button>
+      <button class="tk-button tk-button--secondary-destructive tk-button--medium" disabled>Disabled</button>
+      <button class="tk-button tk-button--secondary-destructive tk-button--medium" disabled>Disabled <i
+          class="tk-icon-lock"></i></button>
+    </div>
+    <div class="tk-m-2">
+      <button class="tk-button tk-button--tertiary-accent tk-button--medium">Button</button>
+      <button class="tk-button tk-button--tertiary-accent tk-button--medium "><i class="tk-icon-lock"></i> Icon
+        left</button>
+      <button class="tk-button tk-button--tertiary-accent tk-button--medium ">Icon right <i
+          class="tk-icon-lock"></i></button>
+      <button class="tk-button tk-button--tertiary-accent tk-button--medium tk-button--icon"><i
+          class="tk-icon-video-off"></i></button>
+      <button class="tk-button tk-button--tertiary-accent tk-button--medium" disabled>Disabled</button>
+      <button class="tk-button tk-button--tertiary-accent tk-button--medium" disabled>Disabled <i
+          class="tk-icon-lock"></i></button>
+    </div>
+    <div class="tk-m-2">
+      <h4>Large</h4>
+      <button class="tk-button tk-button--primary tk-button--large">Button</button>
+      <button class="tk-button tk-button--primary tk-button--large"><i class=" tk-icon tk-icon-lock"></i> Icon
+        left</button>
+      <button class="tk-button tk-button--primary tk-button--large ">Icon right <i class="tk-icon-lock"></i></button>
+      <button class="tk-button tk-button--primary tk-button--large tk-button--icon"><i
+          class="tk-icon-video-off"></i></button>
+      <button class="tk-button tk-button--primary tk-button--large" disabled>Disabled</button>
+      <button class="tk-button tk-button--primary tk-button--large" disabled>Disabled <i
+          class="tk-icon-lock"></i></button>
+    </div>
+    <div class="tk-m-2">
+      <button class="tk-button tk-button--secondary tk-button--large">Button</button>
+      <button class="tk-button tk-button--secondary tk-button--large "><i class="tk-icon-lock"></i> Icon left</button>
+      <button class="tk-button tk-button--secondary tk-button--large ">Icon right <i class="tk-icon-lock"></i></button>
+      <button class="tk-button tk-button--secondary tk-button--large tk-button--icon"><i
+          class="tk-icon-video-off"></i></button>
+      <button class="tk-button tk-button--secondary tk-button--large" disabled>Disabled</button>
+      <button class="tk-button tk-button--secondary tk-button--large" disabled>Disabled <i
+          class="tk-icon-lock"></i></button>
+    </div>
+    <div class="tk-m-2">
+      <button class="tk-button tk-button--secondary-destructive tk-button--large" onclick="">Button</button>
+      <button class="tk-button tk-button--secondary-destructive tk-button--large "><i class="tk-icon-lock"></i> Icon left</button>
+      <button class="tk-button tk-button--secondary-destructive tk-button--large ">Icon right <i class="tk-icon-lock"></i></button>
+      <button class="tk-button tk-button--secondary-destructive tk-button--large tk-button--icon"><i
+          class="tk-icon-video-off"></i></button>
+      <button class="tk-button tk-button--secondary-destructive tk-button--large" disabled>Disabled</button>
 
-<div style="margin: 16px;">
-  <h3>Secondary button</h3>
-  <button class="tk-button tk-button--secondary">Button</button>
-  <button class="tk-button tk-button--secondary"><i class="tk-icon-lock"></i> Button</button>
-  <button class="tk-button tk-button--secondary tk-button--icon"><i class="tk-icon-more"></i></button>
-  <button class="tk-button tk-button--secondary" disabled>Button</button>
-  <button class="tk-button tk-button--secondary" disabled><i class="tk-icon-lock"></i> Button</button>
-  <button class="tk-button tk-button--secondary" disabled><i class="tk-icon-check tk-color-action-ok"></i></button>
-</div>
+      <button class="tk-button tk-button--secondary-destructive tk-button--large" disabled>Disabled <i
+          class="tk-icon-video-off"></i></button>
+    </div>
+    <div class="tk-m-2">
+      <button class="tk-button tk-button--tertiary-accent tk-button--large">Button</button>
+      <button class="tk-button tk-button--tertiary-accent tk-button--large "><i class="tk-icon-lock"></i> Icon
+        left</button>
+      <button class="tk-button tk-button--tertiary-accent tk-button--large ">Icon right <i
+          class="tk-icon-lock"></i></button>
+      <button class="tk-button tk-button--tertiary-accent tk-button--large tk-button--icon"><i
+          class="tk-icon-video-off"></i></button>
+      <button class="tk-button tk-button--tertiary-accent tk-button--large" disabled>Disabled</button>
+      <button class="tk-button tk-button--tertiary-accent tk-button--large tk-scape-condensed" disabled>Disabled <i
+          class="tk-icon-lock"></i></button>
 
-<div style="margin: 16px;">
-  <h3>Tertiary button</h3>
-  <button class="tk-button tk-button--tertiary">Button</button>
-  <button class="tk-button tk-button--tertiary"><i class="tk-icon-lock"></i> Button</button>
-  <button class="tk-button tk-button--tertiary tk-button--icon"><i class="tk-icon-more"></i></button>
-  <button class="tk-button tk-button--tertiary" disabled>Button</button>
-  <button class="tk-button tk-button--tertiary" disabled><i class="tk-icon-lock"></i> Button</button>
-  <button class="tk-button tk-button--tertiary" disabled><i class="tk-icon-check tk-color-action-ok"></i></button>
+      <h3 class="tk-mt-5h">Scape condensed mode</h3>
+    </div>
+    <div class="tk-m-2">Adding the <span class="code">.tk-scape-condensed</span> class on a parent element, the
+      condensed mode will not be applied:</div>
+    <div id="scape-area" class="tk-scape-condensed">
+      <span class="tk-switch tk-m-3">
+        <div class="tk-switch__inputContainer " onclick="scapeCondensed()">
+          <input class="tk-switch__input" type="checkbox" id="switch1" value="active-switch-1" checked>
+          <span class="tk-switch__icon"></span>
+        </div>
+        <label class="tk-switch__label" for="switch" id="scape">Scape condensed</label>
+      </span>
+      <div class="flex-row tk-m-3">
+        <div class="flex-col">
+          <button class="tk-button tk-button--primary tk-button--medium">Medium Button</button>
+        </div>
+        <div class="flex-col">
+          <button class="tk-button tk-button--primary tk-button--large">Large Button</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-<div style="margin: 16px;">
-  <h3>Destructive button</h3>
-  <button class="tk-button tk-button--destructive">Button</button>
-  <button class="tk-button tk-button--destructive"><i class="tk-icon-lock"></i> Button</button>
-  <button class="tk-button tk-button--destructive tk-button--icon"><i class="tk-icon-more"></i></button>
-  <button class="tk-button tk-button--destructive" disabled>Button</button>
-  <button class="tk-button tk-button--destructive" disabled><i class="tk-icon-lock"></i> Button</button>
-  <button class="tk-button tk-button--destructive" disabled><i class="tk-icon-check tk-color-action-ok"></i></button>
-</div>
-</div>
-`
+  <script>
+    var scape = true;
+    function scapeCondensed() {
+      if (!scape) {
+        document.getElementById("scape-area").className = "tk-scape-condensed";
+        document.getElementById("scape").innerText = "Scape condensed";
+      }
+      else {
+        document.getElementById("scape-area").className = "";
+        document.getElementById("scape").innerText = "Default";
+      }
+      scape = !scape;
+    }
+    var checked = true;
+    function applyCondensed() {
+      if (!checked) {
+        document.getElementById("condensed").className = "condensed";
+        document.getElementById("condense").innerText = "Condensed";
+      }
+      else {
+        document.getElementById("condensed").className = "";
+        document.getElementById("condense").innerText = "Default";
+      }
+      checked = !checked;
+    }
+  </script>
+`;
