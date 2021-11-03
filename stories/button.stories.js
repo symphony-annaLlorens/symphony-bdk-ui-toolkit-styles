@@ -5,7 +5,7 @@ export default {
 export const Sizes = () => `
 <div style="margin: 16px;">
   <h2>Default </h2>
-  <button class="tk-button tk-button--primary" style="display:flex">Button</button>
+  <button class="tk-button tk-button--primary">Button</button>
   <button class="tk-button tk-button--primary "><i class="tk-icon-lock"></i> Icon left</button>
   <button class="tk-button tk-button--primary ">Icon right <i class="tk-icon-lock"></i></button>
   <button class="tk-button tk-button--primary tk-button--icon"><i class="tk-icon-video-off"></i></button>
