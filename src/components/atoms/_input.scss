@@ -234,9 +234,12 @@ textarea.tk-input {
       getColor($--tk-input-color, disabled),
       getColor($--tk-input-color, defaultBg)
     );
-    .tk-input__icon {
+    .tk-input__icon { // left icon
       outline: none;
-      color: getColor($--tk-input-color, disabledText);
+      color: getColor($--tk-input-color, disabled); // same as border
+    }
+    .tk-input__right-decorators { // right icons
+      color: getColor($--tk-input-color, disabled); // same as border
     }
     .tk-input__hide {
       display: none;
