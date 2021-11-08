@@ -209,8 +209,8 @@ export const Sizes = () => `
   var escape = true;
   function escapeCondensed() {
     if (!escape) {
-      document.getElementById("scape-area").className = "tk-escape-condensed";
-      document.getElementById("scape").innerText = "Escape condensed";
+      document.getElementById("escape-area").className = "tk-escape-condensed";
+      document.getElementById("escape").innerText = "Escape condensed";
     }
     else {
       document.getElementById("escape-area").className = "";
