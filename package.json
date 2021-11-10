@@ -1,6 +1,6 @@
 {
   "name": "@symphony-ui/uitoolkit-styles",
-  "version": "2.8.0",
+  "version": "2.9.0",
   "description": "Symphony UI design system",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -42,6 +42,7 @@
     "postcss-cli": "^8.3.0",
     "sass": "^1.22.10",
     "sass-loader": "^7.2.0",
+    "storybook-addon-themes": "^6.1.0",
     "storybook-dark-mode": "^1.0.8"
   }
 }
