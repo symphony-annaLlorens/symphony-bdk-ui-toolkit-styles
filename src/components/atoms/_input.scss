@@ -17,106 +17,19 @@ textarea.tk-input {
 }
 
 .tk-input {
-  // keep independent logic for a standalone tk-input
-  width: 100%;
-  box-sizing: border-box;
-  font-family: inherit;
-  font-size: toRem(14);
-  line-height: toRem(20);
-  @include spacingField(0.5, 1.5, 'padding');
-  background-color: transparent;
-  border-color: transparent;
-  border-radius: toRem(4);
-  border: none;
-  outline: none;
-  @include addTransition();
-
-  &--medium {
-    @include spacingField(0.5, 1.5, 'padding');
-  }
-  &--small {
-    @include spacingField(0, 1, 'padding');
-  }
-
-  @include styleInput(
-    getColor($--tk-input-color, filledText),
-    getColor($--tk-input-color, emptyText),
-    getColor($--tk-input-color, default),
-    getColor($--tk-input-color, active),
-    getColor($--tk-input-color, hover),
-    getColor($--tk-input-color, defaultBg)
-  );
-
-  &:read-only {
-    @include styleInput(
-      getColor($--tk-input-color, filledText),
-      getColor($--tk-input-color, emptyText),
-      getColor($--tk-input-color, readonly),
-      getColor($--tk-input-color, readonly),
-      getColor($--tk-input-color, readonly),
-      getColor($--tk-input-color, readonlyBg)
-    );
-  }
-  &:disabled {
-    background-color: getColor($--tk-input-color, defaultBg);
-  }
-
-  .tk-validation--error > & {
-    @include styleInput(
-      getColor($--tk-input-color, filledText),
-      getColor($--tk-input-color, emptyText),
-      getColor($--tk-input-color, errorActive),
-      getColor($--tk-input-color, errorActive),
-      getColor($--tk-input-color, errorHover),
-      getColor($--tk-input-color, defaultBg)
-    );
-  }
-  &:disabled {
-    @include styleInput(
-      getColor($--tk-input-color, disabledText),
-      getColor($--tk-input-color, disabledText),
-      getColor($--tk-input-color, disabled),
-      getColor($--tk-input-color, disabled),
-      getColor($--tk-input-color, disabled),
-      getColor($--tk-input-color, defaultBg)
-    );
-  }
+  @include styleTKInput;
 }
 
 .tk-input__container {
   textarea.tk-input {
     padding-right: toRem(4);
   }
-
-  display: flex;
+  @include styleTKInputContainer;
 
   background-color: transparent;
   border-color: transparent;
-  border-radius: toRem(4);
-  border: none;
   outline: none;
   padding: 0 toRem(12);
-  @include addTransition();
-
-  @include styleInput(
-    getColor($--tk-input-color, filledText),
-    getColor($--tk-input-color, emptyText),
-    getColor($--tk-input-color, default),
-    getColor($--tk-input-color, active),
-    getColor($--tk-input-color, hover),
-    getColor($--tk-input-color, defaultBg)
-  );
-
-  .tk-validation--error & {
-    @include styleInput(
-      getColor($--tk-input-color, filledText),
-      getColor($--tk-input-color, emptyText),
-      getColor($--tk-input-color, errorActive),
-      getColor($--tk-input-color, errorActive),
-      getColor($--tk-input-color, errorHover),
-      getColor($--tk-input-color, defaultBg)
-    );
-  }
 
   .tk-input {
     box-shadow: none; // force cancel tk-input border
@@ -169,11 +82,21 @@ textarea.tk-input {
       }
     }
 
+    &--large {
+      @include spacingField(1, 0);
+    }
     &--medium {
       @include spacingField(0.5, 0);
     }
     &--small {
       @include spacingField(0, 0);
+    }
+  }
+
+  &--large {
+    padding: 0 toRem(16);
+    .tk-input {
+      @include spacingField(1, 0);
     }
   }
 

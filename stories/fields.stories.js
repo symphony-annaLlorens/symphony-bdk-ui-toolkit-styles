@@ -538,7 +538,7 @@ export const TextField = () => {
 
 export const Select = () => {
   return `
-  <h3>Default</h3>
+  <h2>Default - Medium size</h2>
 
   <div>
     <select type="text" class="tk-select" value="Text" style="width:200px">
@@ -550,7 +550,7 @@ export const Select = () => {
   </div>
 
   <div class="tk-select-group tk-mt-2">
-    <div class="tk-select-group__header">
+    <div class="tk-input-group__header">
       <label class="tk-label" for="input">Field label</label>
     </div>
     <div>
@@ -566,7 +566,7 @@ export const Select = () => {
 
   <div>
     <h3>Disabled</h3>
-    <div class="tk-select--is-disabled">
+    <div>
       <select type="text" class="tk-select" value="Text" style="width:200px" disabled>
         <option>Item 1</option>
       </select>
@@ -574,10 +574,10 @@ export const Select = () => {
     </div>
 
     <div class="tk-select-group tk-mt-2">
-      <div class="tk-select-group__header">
+      <div class="tk-input-group__header">
         <label class="tk-label" for="input">Field label</label>
       </div>
-      <div class="tk-select--is-disabled">
+      <div>
         <select type="text" class="tk-select tk-select--expanded" value="Text" style="width:200px" disabled>
           <option>Item 1</option>
           <option>Item 2</option>
@@ -599,11 +599,16 @@ export const Select = () => {
       </select>
       <i></i>
     </div>
+    <ul class="tk-validation__errors">
+      <li>
+        <i class="tk-icon-alert-triangle"></i>This field is required.
+      </li>
+    </ul>
   </span>
 
   <span class="tk-validation tk-validation--error">
     <div class="tk-select-group tk-mt-2">
-      <div class="tk-select-group__header">
+      <div class="tk-input-group__header">
         <label class="tk-label" for="input">Field label</label>
       </div>
       <div>
@@ -615,7 +620,100 @@ export const Select = () => {
         <i></i>
       </div>
     </div>
+    <ul class="tk-validation__errors">
+      <li>
+        <i class="tk-icon-alert-triangle"></i>This field is required.
+      </li>
+    </ul>
+  </span>
+
+  <h2>Large size</h2>
+
+  <div>
+    <select type="text" class="tk-select tk-select--large" value="Text" style="width:200px">
+      <option>Item 1</option>
+      <option>Item 2</option>
+      <option>Item 3 with a very very very long text</option>
+    </select>
+    <i></i>
+  </div>
+
+  <div class="tk-select-group tk-mt-2">
+    <div class="tk-input-group__header">
+      <label class="tk-label" for="input">Field label</label>
+    </div>
+    <div>
+      <select type="text" class="tk-select tk-select--large" value="Text" style="width:200px">
+        <option>Item 1</option>
+        <option>Item 2</option>
+        <option>Item 3 with a very very very long text</option>
+      </select>
+      <i></i>
+    </div>
     <div class="tk-select__helper">This is a helper.</div>
+  </div>
+
+  <div>
+    <h3>Disabled</h3>
+    <div>
+      <select type="text" class="tk-select tk-select--large" value="Text" style="width:200px" disabled>
+        <option>Item 1</option>
+      </select>
+      <i></i>
+    </div>
+
+    <div class="tk-select-group tk-mt-2">
+      <div class="tk-input-group__header">
+        <label class="tk-label" for="input">Field label</label>
+      </div>
+      <div>
+        <select type="text" class="tk-select tk-select--expanded" value="Text" style="width:200px" disabled>
+          <option>Item 1</option>
+          <option>Item 2</option>
+          <option>Item 3 with a very very very long text</option>
+        </select>
+        <i></i>
+      </div>
+      <div class="tk-select__helper">This is a helper.</div>
+    </div>
+  </div>
+
+  <h3>Error</h3>
+  <span class="tk-validation tk-validation--error">
+    <div>
+      <select type="text" class="tk-select tk-select--large" value="Text" style="width:200px">
+        <option>Item 1</option>
+        <option>Item 2</option>
+        <option>Item 3 with a very very very long text</option>
+      </select>
+      <i></i>
+    </div>
+    <ul class="tk-validation__errors">
+      <li>
+        <i class="tk-icon-alert-triangle"></i>This field is required.
+      </li>
+    </ul>
+  </span>
+
+  <span class="tk-validation tk-validation--error">
+    <div class="tk-select-group tk-mt-2">
+      <div class="tk-input-group__header">
+        <label class="tk-label" for="input">Field label</label>
+      </div>
+      <div>
+        <select type="text" class="tk-select" value="Text" style="width:200px">
+          <option>Item 1</option>
+          <option>Item 2</option>
+          <option>Item 3 with a very very very long text</option>
+        </select>
+        <i></i>
+      </div>
+    </div>
+    <ul class="tk-validation__errors">
+      <li>
+        <i class="tk-icon-alert-triangle"></i>This field is required.
+      </li>
+    </ul>
   </span>
 `;
 };

@@ -1,20 +1,5 @@
 .tk-input-group {
-  display: flex;
-  flex-direction: column;
-
-  &__header {
-    order: -1;
-    margin-bottom: toRem(4);
-    label {
-      @include styleLabel;
-    }
-    .tk-icon-info-round {
-      @include addFocusStyle;
-    }
-    .tk-tooltip__wrapper {
-      line-height: toRem(16);
-    }
-  }
+  @include styleInputGroup;
 
   .tk-input__helper {
     @include styleLabel;

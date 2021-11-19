@@ -3,7 +3,7 @@
   // globals
   --tk-background: #{getColor($graphite, '80')};
   --tk-background-reverse: #{$scolor-white};
- 
+
   // Primary button
   --tk-button-color-primary-disabled: #{getColor($electricity, '70')};
   --tk-button-color-primary-text-disabled: #{getColor($electricity, '60')};
@@ -81,6 +81,22 @@
   
   --tk-input-hide-color-default: #{getColor($electricity, '40')};
   --tk-input-hide-color-disabled: #{getColor($electricity, '30')};
+  
+  --tk-label-color: #{getColor($electricity, '20')};
+
+  --tk-select-color-active-menu-bg: #{getColor($graphite, '30')};
+  --tk-select-color-hover-menu-bg: #{getColor($graphite, '20')};
+  --tk-select-color-hover-menu-text: #{getColor($graphite, '80')};
+  --tk-select-color-default-menu-icon: #{getColor($graphite, '40')};
+  --tk-select-color-hover-menu-icon: #{getColor($graphite, '60')};
+  --tk-select-color-clear-icon: #{getColor($graphite, '20')};
+  
+  --tk-select-color-destructive-menu-text: #{getColor($red, '40')};
+  
+  --tk-select-tag-color-default: #{getColor($graphite, '05')};
+  --tk-select-tag-color-default-icon: #{getColor($graphite, '30')};
+  --tk-select-tag-color-default-bg: #{getColor($graphite, '60')};
+
 
   --tk-label-color: #{getColor($graphite, '20')};
   --tk-label-required-color: #{getColor($red, '40')};
