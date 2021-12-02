@@ -111,6 +111,7 @@
       }
       &.tk-select__dropdown-indicator {
         color: getColor($graphite, '50');
+        padding: 0; // override lib styles
         padding-right: toRem(12);
         .tk-select__single-value {
           color: getColor($graphite, '50');
@@ -246,6 +247,7 @@
 
   &--small {
     .tk-select__container.tk-select__control {
+      min-height: toRem(24);
       padding-left: toRem(8);
       .tk-select__value-container {
         padding: 0;

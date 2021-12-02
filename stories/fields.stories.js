@@ -538,10 +538,10 @@ export const TextField = () => {
 
 export const Select = () => {
   return `
-  <h2>Default - Medium size</h2>
+  <h2>Small size</h2>
 
   <div>
-    <select type="text" class="tk-select" value="Text" style="width:200px">
+    <select class="tk-select tk-select--small" style="width:200px">
       <option>Item 1</option>
       <option>Item 2</option>
       <option>Item 3 with a very very very long text</option>
@@ -549,50 +549,139 @@ export const Select = () => {
     <i></i>
   </div>
 
-  <div class="tk-select-group tk-mt-2">
+  <div class="tk-input-group tk-input-group--small tk-mt-2">
     <div class="tk-input-group__header">
       <label class="tk-label" for="input">Field label</label>
     </div>
     <div>
-      <select type="text" class="tk-select" value="Text" style="width:200px">
+      <select class="tk-select tk-select--small" style="width:200px">
         <option>Item 1</option>
         <option>Item 2</option>
         <option>Item 3 with a very very very long text</option>
       </select>
       <i></i>
     </div>
-    <div class="tk-select__helper">This is a helper.</div>
+    <div class="tk-input__helper">This is a helper.</div>
   </div>
 
   <div>
     <h3>Disabled</h3>
     <div>
-      <select type="text" class="tk-select" value="Text" style="width:200px" disabled>
+      <select class="tk-select tk-select--small" style="width:200px" disabled>
         <option>Item 1</option>
       </select>
       <i></i>
     </div>
 
-    <div class="tk-select-group tk-mt-2">
+    <div class="tk-input-group tk-input-group--small tk-mt-2">
       <div class="tk-input-group__header">
         <label class="tk-label" for="input">Field label</label>
       </div>
       <div>
-        <select type="text" class="tk-select tk-select--expanded" value="Text" style="width:200px" disabled>
+        <select class="tk-select tk-select--small" style="width:200px" disabled>
           <option>Item 1</option>
           <option>Item 2</option>
           <option>Item 3 with a very very very long text</option>
         </select>
         <i></i>
       </div>
-      <div class="tk-select__helper">This is a helper.</div>
+      <div class="tk-input__helper">This is a helper.</div>
+    </div>
+  </div>
+
+  <h3>Error</h3>
+  <span class="tk-validation tk-validation--error tk-validation--small">
+    <div>
+      <select class="tk-select tk-select--small" style="width:200px">
+        <option>Item 1</option>
+        <option>Item 2</option>
+        <option>Item 3 with a very very very long text</option>
+      </select>
+      <i></i>
+    </div>
+    <ul class="tk-validation__errors">
+      <li>
+        <i class="tk-icon-alert-triangle"></i>This field is required.
+      </li>
+    </ul>
+  </span>
+
+  <span class="tk-validation tk-validation--error tk-validation--small">
+    <div class="tk-input-group tk-mt-2">
+      <div class="tk-input-group__header">
+        <label class="tk-label" for="input">Field label</label>
+      </div>
+      <div>
+        <select class="tk-select tk-select--small" style="width:200px">
+          <option>Item 1</option>
+          <option>Item 2</option>
+          <option>Item 3 with a very very very long text</option>
+        </select>
+        <i></i>
+      </div>
+    </div>
+    <ul class="tk-validation__errors">
+      <li>
+        <i class="tk-icon-alert-triangle"></i>This field is required.
+      </li>
+    </ul>
+  </span>
+
+  <h2>Default - Medium size</h2>
+
+  <div>
+    <select class="tk-select" style="width:200px">
+      <option>Item 1</option>
+      <option>Item 2</option>
+      <option>Item 3 with a very very very long text</option>
+    </select>
+    <i></i>
+  </div>
+
+  <div class="tk-input-group tk-mt-2">
+    <div class="tk-input-group__header">
+      <label class="tk-label" for="input">Field label</label>
+    </div>
+    <div>
+      <select class="tk-select" style="width:200px">
+        <option>Item 1</option>
+        <option>Item 2</option>
+        <option>Item 3 with a very very very long text</option>
+      </select>
+      <i></i>
+    </div>
+    <div class="tk-input__helper">This is a helper.</div>
+  </div>
+
+  <div>
+    <h3>Disabled</h3>
+    <div>
+      <select class="tk-select" style="width:200px" disabled>
+        <option>Item 1</option>
+      </select>
+      <i></i>
+    </div>
+
+    <div class="tk-input-group tk-mt-2">
+      <div class="tk-input-group__header">
+        <label class="tk-label" for="input">Field label</label>
+      </div>
+      <div>
+        <select class="tk-select" style="width:200px" disabled>
+          <option>Item 1</option>
+          <option>Item 2</option>
+          <option>Item 3 with a very very very long text</option>
+        </select>
+        <i></i>
+      </div>
+      <div class="tk-input__helper">This is a helper.</div>
     </div>
   </div>
 
   <h3>Error</h3>
   <span class="tk-validation tk-validation--error">
     <div>
-      <select type="text" class="tk-select" value="Text" style="width:200px">
+      <select class="tk-select" style="width:200px">
         <option>Item 1</option>
         <option>Item 2</option>
         <option>Item 3 with a very very very long text</option>
@@ -607,12 +696,12 @@ export const Select = () => {
   </span>
 
   <span class="tk-validation tk-validation--error">
-    <div class="tk-select-group tk-mt-2">
+    <div class="tk-input-group tk-mt-2">
       <div class="tk-input-group__header">
         <label class="tk-label" for="input">Field label</label>
       </div>
       <div>
-        <select type="text" class="tk-select" value="Text" style="width:200px">
+        <select class="tk-select" style="width:200px">
           <option>Item 1</option>
           <option>Item 2</option>
           <option>Item 3 with a very very very long text</option>
@@ -630,7 +719,7 @@ export const Select = () => {
   <h2>Large size</h2>
 
   <div>
-    <select type="text" class="tk-select tk-select--large" value="Text" style="width:200px">
+    <select class="tk-select tk-select--large" style="width:200px">
       <option>Item 1</option>
       <option>Item 2</option>
       <option>Item 3 with a very very very long text</option>
@@ -638,50 +727,50 @@ export const Select = () => {
     <i></i>
   </div>
 
-  <div class="tk-select-group tk-mt-2">
+  <div class="tk-input-group tk-mt-2">
     <div class="tk-input-group__header">
       <label class="tk-label" for="input">Field label</label>
     </div>
     <div>
-      <select type="text" class="tk-select tk-select--large" value="Text" style="width:200px">
+      <select class="tk-select tk-select--large" style="width:200px">
         <option>Item 1</option>
         <option>Item 2</option>
         <option>Item 3 with a very very very long text</option>
       </select>
       <i></i>
     </div>
-    <div class="tk-select__helper">This is a helper.</div>
+    <div class="tk-input__helper">This is a helper.</div>
   </div>
 
   <div>
     <h3>Disabled</h3>
     <div>
-      <select type="text" class="tk-select tk-select--large" value="Text" style="width:200px" disabled>
+      <select class="tk-select tk-select--large" style="width:200px" disabled>
         <option>Item 1</option>
       </select>
       <i></i>
     </div>
 
-    <div class="tk-select-group tk-mt-2">
+    <div class="tk-input-group tk-mt-2">
       <div class="tk-input-group__header">
         <label class="tk-label" for="input">Field label</label>
       </div>
       <div>
-        <select type="text" class="tk-select tk-select--expanded" value="Text" style="width:200px" disabled>
+        <select class="tk-select  tk-select--large" style="width:200px" disabled>
           <option>Item 1</option>
           <option>Item 2</option>
           <option>Item 3 with a very very very long text</option>
         </select>
         <i></i>
       </div>
-      <div class="tk-select__helper">This is a helper.</div>
+      <div class="tk-input__helper">This is a helper.</div>
     </div>
   </div>
 
   <h3>Error</h3>
   <span class="tk-validation tk-validation--error">
     <div>
-      <select type="text" class="tk-select tk-select--large" value="Text" style="width:200px">
+      <select class="tk-select tk-select--large" style="width:200px">
         <option>Item 1</option>
         <option>Item 2</option>
         <option>Item 3 with a very very very long text</option>
@@ -696,12 +785,12 @@ export const Select = () => {
   </span>
 
   <span class="tk-validation tk-validation--error">
-    <div class="tk-select-group tk-mt-2">
+    <div class="tk-input-group tk-mt-2">
       <div class="tk-input-group__header">
         <label class="tk-label" for="input">Field label</label>
       </div>
       <div>
-        <select type="text" class="tk-select" value="Text" style="width:200px">
+        <select class="tk-select tk-select--large" style="width:200px">
           <option>Item 1</option>
           <option>Item 2</option>
           <option>Item 3 with a very very very long text</option>

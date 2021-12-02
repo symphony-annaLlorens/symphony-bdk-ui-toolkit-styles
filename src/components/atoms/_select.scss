@@ -19,16 +19,6 @@ select.tk-select {
     @include tk-icon-drop-up;
   }
 }
-.tk-select-group {
-  @extend .tk-input-group;
-}
-
-.tk-select {
-  &__helper {
-    @include styleLabel;
-    margin-top: toRem(4);
-  }
-}
 
 .tk-select--custom-dropdown {
   @include listStyle;

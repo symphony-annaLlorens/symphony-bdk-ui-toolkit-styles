@@ -18,6 +18,17 @@ textarea.tk-input {
 
 .tk-input {
   @include styleTKInput;
+
+  &:read-only {
+    @include styleInput(
+      getColor($--tk-input-color, filledText),
+      getColor($--tk-input-color, emptyText),
+      getColor($--tk-input-color, readonly),
+      getColor($--tk-input-color, readonly),
+      getColor($--tk-input-color, readonly),
+      getColor($--tk-input-color, readonlyBg)
+    );
+  }
 }
 
 .tk-input__container {

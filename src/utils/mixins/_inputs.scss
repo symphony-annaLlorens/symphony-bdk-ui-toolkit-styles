@@ -92,16 +92,6 @@
     @include spacingField(0, 1, 'padding');
   }
 
-  &:read-only {
-    @include styleInput(
-      getColor($--tk-input-color, filledText),
-      getColor($--tk-input-color, emptyText),
-      getColor($--tk-input-color, readonly),
-      getColor($--tk-input-color, readonly),
-      getColor($--tk-input-color, readonly),
-      getColor($--tk-input-color, readonlyBg)
-    );
-  }
   &:disabled {
     background-color: getColor($--tk-input-color, defaultBg);
   }
