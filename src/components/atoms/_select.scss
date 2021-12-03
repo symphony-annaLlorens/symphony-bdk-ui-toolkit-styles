@@ -1,6 +1,8 @@
 select.tk-select {
   @include styleTKInput;
   
+  // NOTE: select.tk-select[readonly] is the selector to implement the readonly https://perzoinc.atlassian.net/browse/APP-4667
+
   -webkit-appearance: none;
   background: transparent no-repeat;
   background-position-x: 96%;
