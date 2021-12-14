@@ -26,7 +26,6 @@
       border-radius: 50%;
     } @else {
       border-radius: toRem(2);
-      outline-offset: toRem(2);
     }
   }
 }

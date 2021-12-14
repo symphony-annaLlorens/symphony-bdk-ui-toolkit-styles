@@ -607,7 +607,7 @@ export const Select = () => {
   </span>
 
   <span class="tk-validation tk-validation--error tk-validation--small">
-    <div class="tk-input-group tk-mt-2">
+    <div class="tk-input-group tk-input-group--small tk-mt-2">
       <div class="tk-input-group__header">
         <label class="tk-label" for="input">Field label</label>
       </div>
@@ -727,7 +727,7 @@ export const Select = () => {
     <i></i>
   </div>
 
-  <div class="tk-input-group tk-mt-2">
+  <div class="tk-input-group tk-input-group--large tk-mt-2">
     <div class="tk-input-group__header">
       <label class="tk-label" for="input">Field label</label>
     </div>
@@ -751,12 +751,12 @@ export const Select = () => {
       <i></i>
     </div>
 
-    <div class="tk-input-group tk-mt-2">
+    <div class="tk-input-group tk-input-group--large tk-mt-2">
       <div class="tk-input-group__header">
         <label class="tk-label" for="input">Field label</label>
       </div>
       <div>
-        <select class="tk-select  tk-select--large" style="width:200px" disabled>
+        <select class="tk-select tk-select--large" style="width:200px" disabled>
           <option>Item 1</option>
           <option>Item 2</option>
           <option>Item 3 with a very very very long text</option>
@@ -768,7 +768,7 @@ export const Select = () => {
   </div>
 
   <h3>Error</h3>
-  <span class="tk-validation tk-validation--error">
+  <span class="tk-validation tk-validation--large tk-validation--error">
     <div>
       <select class="tk-select tk-select--large" style="width:200px">
         <option>Item 1</option>
@@ -784,8 +784,8 @@ export const Select = () => {
     </ul>
   </span>
 
-  <span class="tk-validation tk-validation--error">
-    <div class="tk-input-group tk-mt-2">
+  <span class="tk-validation tk-validation--large tk-validation--error">
+    <div class="tk-input-group tk-input-group--large tk-mt-2">
       <div class="tk-input-group__header">
         <label class="tk-label" for="input">Field label</label>
       </div>

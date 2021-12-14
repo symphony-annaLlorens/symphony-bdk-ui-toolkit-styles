@@ -17,6 +17,12 @@
     cursor: default;
     pointer-events: all;
   }
+
+  &:focus-visible {
+    @include outlineStyle();
+    outline-offset: toRem(1);
+  }
+
   &--primary {
     @include styleFilledButton($--tk-button-color-primary);
     &-destructive {

@@ -11,6 +11,7 @@ select.tk-select {
   & + i::before {
     position: relative;
     right: toRem(24);
+    top: toRem(1);
     font-style: normal;
     font-family: 'tk-icons';
     font-size: toRem(14);

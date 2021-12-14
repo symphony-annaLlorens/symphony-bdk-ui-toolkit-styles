@@ -81,15 +81,15 @@
     getColor($--tk-input-color, defaultBg)
   );
 
-  &--large {
-    @include spacingField(1, 2, 'padding');
+  &--small, #{condensed('--medium')}, #{condensed('')} {
+    @include spacingField(0, 1, 'padding');
   }
 
-  &--medium {
+  &--medium, #{condensed('--large')} {
     @include spacingField(0.5, 1.5, 'padding');
   }
-  &--small {
-    @include spacingField(0, 1, 'padding');
+  &--large {
+    @include spacingField(1, 2, 'padding');
   }
 
   &:disabled {

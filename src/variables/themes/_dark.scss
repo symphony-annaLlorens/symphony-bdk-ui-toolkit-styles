@@ -103,6 +103,8 @@
   
   --tk-label-color-default: #{getColor($graphite, '40')};
 
+  --tk-hint-color-default: #{getColor($graphite, '30')};
+
   --tk-input-default-inactive-color: #{$scolor-graphite-minus-48};
   --tk-input-default-active-color: #{$scolor-graphite-minus-96};
   --tk-input-default-hover-color: #{$scolor-graphite-minus-72};

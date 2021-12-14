@@ -1,8 +1,18 @@
 .tk-input-group {
   @include styleInputGroup;
-
+  
   .tk-input__helper {
     @include styleLabel;
+    margin-top: toRem(4);
+  }
+
+  .tk-input-group__header {
+    margin-bottom: toRem(4);
+    .tk-tooltip__wrapper {
+      font-size: toRem(16);
+    }
+  }
+  .tk-input__helper {
     margin-top: toRem(4);
   }
 
@@ -16,18 +26,9 @@
       color: getColor($--tk-input-color, disabledText);
     }
   }
-  &--medium {
-    .tk-input-group__header {
-      margin-bottom: toRem(4);
-      .tk-tooltip__wrapper {
-        font-size: toRem(16);
-      }
-    }
-    .tk-input__helper {
-      margin-top: toRem(4);
-    }
-  }
-  &--small {
+
+
+  &--small, #{condensed('--medium')}, #{condensed('')} {
     .tk-input-group__header {
       margin-bottom: toRem(2);
       .tk-tooltip__wrapper {
@@ -36,6 +37,18 @@
     }
     .tk-input__helper {
       margin-top: toRem(2);
+    }
+  }
+
+  &--medium, &--large, #{condensed('--large')} {
+    .tk-input-group__header {
+      margin-bottom: toRem(4);
+      .tk-tooltip__wrapper {
+        font-size: toRem(16);
+      }
+    }
+    .tk-input__helper {
+      margin-top: toRem(4);
     }
   }
 }

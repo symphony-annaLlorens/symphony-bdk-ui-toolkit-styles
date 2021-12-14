@@ -2,23 +2,7 @@
   position: relative;
 }
 
-textarea.tk-input {
-  text-overflow: ellipsis;
-  padding-right: toRem(16);
-  &:not([rows]), &--medium:not([rows]) {
-    min-height: toRem(128);
-  }
-  &--small {
-    &:not([rows]) {
-      min-height: toRem(116);
-      padding-right: toRem(12);
-    }
-  }
-}
-
 .tk-input {
-  @include styleTKInput;
-
   &:read-only {
     @include styleInput(
       getColor($--tk-input-color, filledText),
@@ -29,6 +13,8 @@ textarea.tk-input {
       getColor($--tk-input-color, readonlyBg)
     );
   }
+  @include styleTKInput;
+
 }
 
 .tk-input__container {
@@ -37,10 +23,18 @@ textarea.tk-input {
   }
   @include styleTKInputContainer;
 
-  background-color: transparent;
   border-color: transparent;
   outline: none;
   padding: 0 toRem(12);
+
+
+  &.active {
+    .tk-input {
+      &__right-decorators {
+        color: getColor($electricity, '50');
+      }
+    }  
+  }
 
   .tk-input {
     box-shadow: none; // force cancel tk-input border
@@ -84,48 +78,40 @@ textarea.tk-input {
         outline: none;
       }
       @include addFocusStyle('false');
+      outline-offset: toRem(2);
     }
 
     &__right-decorators {
       display: flex;
+      i {
+        align-self: center;
+      }
       > *:not(:last-child) {
         margin-right: toRem(8);
       }
+      &__clickable {
+        @include addFocusStyle('false');
+        cursor: pointer;
+        &:hover {
+          color: getColor($electricity, '40');
+        }
+        &:active {
+          color: getColor($electricity, '50');
+        }
+      }
     }
-
+  
+    &--small, #{condensed('--medium')}, #{condensed('')} {
+      @include spacingField(0, 0);
+    }
+    &--medium, #{condensed('--large')} {
+      @include spacingField(0.5, 0);
+    }
     &--large {
       @include spacingField(1, 0);
     }
-    &--medium {
-      @include spacingField(0.5, 0);
-    }
-    &--small {
-      @include spacingField(0, 0);
-    }
   }
-
-  &--large {
-    padding: 0 toRem(16);
-    .tk-input {
-      @include spacingField(1, 0);
-    }
-  }
-
-  &--medium {
-    padding: 0 toRem(12);
-    .tk-input {
-      @include spacingField(0.5, 0);
-    }
-    .tk-input__icon {
-      margin-right: toRem(8);
-    }
-    .tk-input__right-decorators {
-      > *:not(:last-child) {
-        margin-right: toRem(8);
-      }
-    }
-  }
-  &--small {
+  &--small, #{condensed('--medium')}, #{condensed('')} {
     padding: 0 toRem(8);
     .tk-input {
       @include spacingField(0, 0);
@@ -144,7 +130,26 @@ textarea.tk-input {
       }
     }
   }
-
+  &--medium, #{condensed('--large')} {
+    padding: 0 toRem(12);
+    .tk-input {
+      @include spacingField(0.5, 0);
+    }
+    .tk-input__icon {
+      margin-right: toRem(8);
+    }
+    .tk-input__right-decorators {
+      > *:not(:last-child) {
+        margin-right: toRem(8);
+      }
+    }
+  }
+  &--large {
+    padding: 0 toRem(16);
+    .tk-input {
+      @include spacingField(1, 0);
+    }
+  }
   &--readonly {
     @include styleInput(
       getColor($--tk-input-color, filledText),
@@ -177,6 +182,20 @@ textarea.tk-input {
     }
     .tk-input__hide {
       display: none;
+    }
+  }
+}
+
+textarea.tk-input {
+  text-overflow: ellipsis;
+  padding-right: toRem(16);
+  &:not([rows]), &--medium:not([rows]) {
+    min-height: toRem(128);
+  }
+  &--small, #{condensed('--medium')}, #{condensed('')} {
+    &:not([rows]) {
+      min-height: toRem(116);
+      padding-right: toRem(12);
     }
   }
 }

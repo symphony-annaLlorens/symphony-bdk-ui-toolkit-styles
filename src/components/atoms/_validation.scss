@@ -10,11 +10,19 @@
       margin-right: toRem(4);
     }
   }
-  &--small {
+  &--small, #{condensed('--medium')}, #{condensed('')} {
     .tk-validation__errors {
       margin: toRem(2) 0 0 0;
       i {
         margin-right: toRem(2);
+      }
+    }
+  }
+  &--large, #{condensed('--large')} {
+    .tk-validation__errors {
+      margin: toRem(4) 0 0 0;
+      i {
+        margin-right: toRem(4);
       }
     }
   }
