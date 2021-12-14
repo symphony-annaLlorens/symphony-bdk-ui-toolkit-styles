@@ -8,10 +8,10 @@ UIToolkit styles library is intended to implement the visual part of Symphony's 
 
 ## Defining a new component
 
-DevX team is the official owner of UIToolkit and the creation of any new component implies the following steps:
+Solution Frameworks team is the official owner of UIToolkit and the creation of any new component implies the following steps:
 
 - Discussing the creation of the new component by providing example use cases and contexts in UIToolkit Contributors room
-- Providing a clear design and description to devX team through a confluence document and a figma provided by UX team
+- Providing a clear design and description to SolFwk team through a confluence document and a UIToolkit Handoff figma provided by UX team
 - The confluence page should document the CSS convention for using the component, the goal is to align on the simplest API to use.
 
 ## Structure and Styleguide
@@ -27,10 +27,28 @@ In order to keep consistency between components the following aspects are to be 
 - Atomic components (buttons, inputs) should go under atoms directory while composed ones (input group) should go under molecules
 - All components should implement light AND dark theme for this use static colors palette (variables/colors/statics) and theme accessors to be used in your component (variables/themes/accessors)
 
-## Icons
-- Adding new icons consists of adding a new file in the icons directory and the build process does the magic
-- The name of the icon should be in kebab-case
-> If your SVG contains an __evenodd__ filling rule it can't be added to the project as it won't render properly under windows. SVGs added should not contain this rule.
+## 😀 Icons
+
+To add **new icons** on UIToolkit:
+
+1. Add the <em>\*.svg</em> source file to:
+```
+src/
+|
+|– icons/
+|   |– svg/
+```
+
+- The name of the icon should be in kebab-case.
+
+- If your SVG contains an __evenodd__ filling rule it can't be added to the project as it won't render properly under windows. SVGs added should not contain this rule.
+
+- **Aliases:** To use several names for the same icon. You can define aliases in the file ['src/icons/tk-icons.aliases.json'](./src/icons/tk-icons.aliases.json).
+
+>```
+>"another-name":"activity"
+>```
+>"tk-icon-another-name" and "tk-icon-activity" will render the same icon.
 
 ## Documentation
 
