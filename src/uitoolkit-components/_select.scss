@@ -1,7 +1,7 @@
 @mixin smallSize {
   --tk-select__control-min-height: #{toRem(20)};
   --tk-select__control-padding-left: #{toRem(8)};
-  --tk-select__value-container-padding: 0; 
+  --tk-select__value-container-padding: #{toRem(2)} 0; 
   --tk-select__value-container--is-multi-padding: #{toRem(2)} 0; 
   --tk-select__multi-value-min-height: #{toRem(20)}; 
   --tk-select__multi-value__label-icon-font-size: #{toRem(12)}; 
